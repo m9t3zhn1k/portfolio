@@ -31,24 +31,21 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ],
+    "lib": ["ES2022", "dom"],
     "typeRoots": ["node_modules/@types"],
     "resolveJsonModule": true,
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
   "angularCompilerOptions": {
     "enableIvy": true,
-    "compilationMode": "partial",
+    "compilationMode": "full",
     "preserveWhitespaces": false,
     "annotateForClosureCompiler": false,
     "skipTemplateCodegen": true,
-    "strictMetadataEmit": true,
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true,
     "enableResourceInlining": true,
+    "fullTemplateTypeCheck": true,
+    "strictMetadataEmit": true,
+    "strictInjectionParameters": true,
     "strictLiteralTypes": true,
     "strictInputTypes": true,
     "strictInputAccessModifiers": true,
@@ -60,5 +57,12 @@
     "strictDomEventTypes": true,
     "strictContextGenerics": true
   },
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ],
   "exclude": ["node_modules", "tmp"]
 }
