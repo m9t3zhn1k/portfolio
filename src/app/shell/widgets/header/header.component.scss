@@ -1,0 +1,28 @@
+:host {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
+  font-size: 1rem;
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
+  width: 100%;
+  max-width: var(--app-container-xl);
+}
+
+.logo {
+  font: var(--app-font-display-xs-semibold);
+}
+
+.nav-list {
+  display: flex;
+  column-gap: 2.5rem;
+}

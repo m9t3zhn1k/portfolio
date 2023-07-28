@@ -1,0 +1,174 @@
+:root {
+  --app-container-xs: 420px;
+  --app-container-sm: 576px;
+  --app-container-md: 768px;
+  --app-container-lg: 992px;
+  --app-container-xl: 1200px;
+  --app-container-2xl: 1440px;
+
+  --app-font: 'Poppins', sans-serif;
+
+  --app-font-display-2xl: 4.5rem/5.625rem var(--app-font);
+
+  --app-font-display-2xl-regular: 400 var(--app-font-display-2xl);
+  --app-font-display-2xl-medium: 500 var(--app-font-display-2xl);
+  --app-font-display-2xl-semibold: 600 var(--app-font-display-2xl);
+  --app-font-display-2xl-bold: 700 var(--app-font-display-2xl);
+
+  --app-font-display-xl: 3.75rem/4.5rem var(--app-font);
+
+  --app-font-display-xl-regular: 400 var(--app-font-display-xl);
+  --app-font-display-xl-medium: 500 var(--app-font-display-xl);
+  --app-font-display-xl-semibold: 600 var(--app-font-display-xl);
+  --app-font-display-xl-bold: 700 var(--app-font-display-xl);
+
+  --app-font-display-lg: 3rem/3.75rem var(--app-font);
+
+  --app-font-display-lg-regular: 400 var(--app-font-display-lg);
+  --app-font-display-lg-medium: 500 var(--app-font-display-lg);
+  --app-font-display-lg-semibold: 600 var(--app-font-display-lg);
+  --app-font-display-lg-bold: 700 var(--app-font-display-lg);
+
+  --app-font-display-md: 2.25rem/2.75rem var(--app-font);
+
+  --app-font-display-md-regular: 400 var(--app-font-display-md);
+  --app-font-display-md-medium: 500 var(--app-font-display-md);
+  --app-font-display-md-semibold: 600 var(--app-font-display-md);
+  --app-font-display-md-bold: 700 var(--app-font-display-md);
+
+  --app-font-display-sm: 1.875rem/2.375rem var(--app-font);
+
+  --app-font-display-sm-regular: 400 var(--app-font-display-sm);
+  --app-font-display-sm-medium: 500 var(--app-font-display-sm);
+  --app-font-display-sm-semibold: 600 var(--app-font-display-sm);
+  --app-font-display-sm-bold: 700 var(--app-font-display-sm);
+
+  --app-font-display-xs: 1.5rem/2rem var(--app-font);
+
+  --app-font-display-xs-regular: 400 var(--app-font-display-xs);
+  --app-font-display-xs-medium: 500 var(--app-font-display-xs);
+  --app-font-display-xs-semibold: 600 var(--app-font-display-xs);
+  --app-font-display-xs-bold: 700 var(--app-font-display-xs);
+
+  --app-font-text-xl: 1.25rem/1.875rem var(--app-font);
+
+  --app-font-text-xl-regular: 400 var(--app-font-text-xl);
+  --app-font-text-xl-medium: 500 var(--app-font-text-xl);
+  --app-font-text-xl-semibold: 600 var(--app-font-text-xl);
+  --app-font-text-xl-bold: 700 var(--app-font-text-xl);
+
+  --app-font-text-lg: 1.125rem/1.75rem var(--app-font);
+
+  --app-font-text-lg-regular: 400 var(--app-font-text-lg);
+  --app-font-text-lg-medium: 500 var(--app-font-text-lg);
+  --app-font-text-lg-semibold: 600 var(--app-font-text-lg);
+  --app-font-text-lg-bold: 700 var(--app-font-text-lg);
+
+  --app-font-text-md: 1rem/1.5rem var(--app-font);
+
+  --app-font-text-md-regular: 400 var(--app-font-text-md);
+  --app-font-text-md-medium: 500 var(--app-font-text-md);
+  --app-font-text-md-semibold: 600 var(--app-font-text-md);
+  --app-font-text-md-bold: 700 var(--app-font-text-md);
+
+  --app-font-text-sm: 0.875rem/1.25rem var(--app-font);
+
+  --app-font-text-sm-regular: 400 var(--app-font-text-sm);
+  --app-font-text-sm-medium: 500 var(--app-font-text-sm);
+  --app-font-text-sm-semibold: 600 var(--app-font-text-sm);
+  --app-font-text-sm-bold: 700 var(--app-font-text-sm);
+
+  --app-font-text-xs: 0.75rem/1.125rem var(--app-font);
+
+  --app-font-text-xs-regular: 400 var(--app-font-text-xs);
+  --app-font-text-xs-medium: 500 var(--app-font-text-xs);
+  --app-font-text-xs-semibold: 600 var(--app-font-text-xs);
+  --app-font-text-xs-bold: 700 var(--app-font-text-xs);
+
+  --app-neutral-25: #131316;
+  --app-neutral-50: #18181b;
+  --app-neutral-100: #26272b;
+  --app-neutral-200: #3f3f46;
+  --app-neutral-300: #51525c;
+  --app-neutral-400: #70707b;
+  --app-neutral-500: #a0a0ab;
+  --app-neutral-600: #d1d1d6;
+  --app-neutral-700: #e4e4e7;
+  --app-neutral-800: #f4f4f5;
+  --app-neutral-900: #fafafa;
+
+  --app-primary-25: #ffffff;
+  --app-primary-50: #e6f4f4;
+  --app-primary-100: #b5dedd;
+  --app-primary-200: #9cd3d1;
+  --app-primary-300: #84c8c6;
+  --app-primary-400: #52b1af;
+  --app-primary-500: #39a6a3;
+  --app-primary-600: #219b98;
+  --app-primary-700: #08908c;
+  --app-primary-800: #067370;
+  --app-primary-900: #055654;
+
+  --app-success-25: #054f31;
+  --app-success-50: #05603a;
+  --app-success-100: #027a48;
+  --app-success-200: #039855;
+  --app-success-300: #12b76a;
+  --app-success-400: #32d583;
+  --app-success-500: #6ce9a6;
+  --app-success-600: #a6f4c5;
+  --app-success-700: #d1fadf;
+  --app-success-800: #ecfdf3;
+  --app-success-900: #f6fef9;
+
+  --app-warning-25: #fffcf5;
+  --app-warning-50: #fffaeb;
+  --app-warning-100: #fef0c7;
+  --app-warning-200: #fedf89;
+  --app-warning-300: #fec84b;
+  --app-warning-400: #fdb022;
+  --app-warning-500: #f79009;
+  --app-warning-600: #dc6803;
+  --app-warning-700: #b54708;
+  --app-warning-800: #93370d;
+  --app-warning-900: #7a2e0e;
+
+  --app-info-25: #194185;
+  --app-info-50: #1849a9;
+  --app-info-100: #175cd3;
+  --app-info-200: #1570ef;
+  --app-info-300: #2e90fa;
+  --app-info-400: #53b1fd;
+  --app-info-500: #84caff;
+  --app-info-600: #b2ddff;
+  --app-info-700: #d1e9ff;
+  --app-info-800: #eff8ff;
+  --app-info-900: #f5faff;
+
+  --app-error-25: #fffbfa;
+  --app-error-50: #fef3f2;
+  --app-error-100: #fee4e2;
+  --app-error-200: #fecdca;
+  --app-error-300: #fda29b;
+  --app-error-400: #f97066;
+  --app-error-500: #f04438;
+  --app-error-600: #d92d20;
+  --app-error-700: #b42318;
+  --app-error-800: #912018;
+  --app-error-900: #7a271a;
+
+  --app-shadow-xs: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  --app-shadow-sm: 0px 1px 2px rgba(16, 24, 40, 0.06), 0px 1px 3px rgba(16, 24, 40, 0.1);
+  --app-shadow-md: 0px 2px 4px -2px rgba(16, 24, 40, 0.06), 0px 4px 8px -2px rgba(16, 24, 40, 0.1);
+  --app-shadow-lg: 0px 4px 6px -2px rgba(16, 24, 40, 0.03),
+    0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+  --app-shadow-xl: 0px 8px 8px -4px rgba(16, 24, 40, 0.03),
+    0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+  --app-shadow-2xl: 0px 24px 48px -12px rgba(16, 24, 40, 0.18);
+  --app-shadow-3xl: 0px 32px 64px -12px rgba(16, 24, 40, 0.14);
+
+  --app-blur-sm: blur(4px);
+  --app-blur-md: blur(8px);
+  --app-blur-lg: blur(12px);
+  --app-blur-xl: blur(20px);
+}
