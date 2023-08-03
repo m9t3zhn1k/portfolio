@@ -1,5 +1,11 @@
 :host {
   display: block;
   height: 100%;
-  background-color: rgb(27, 27, 110);
+}
+
+.wrapper {
+  width: 100%;
+  max-width: var(--app-container-lg);
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
 }

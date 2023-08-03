@@ -1,0 +1,10 @@
+:host {
+  display: block;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
+  width: 100%;
+  max-width: var(--app-container-xl);
+}
