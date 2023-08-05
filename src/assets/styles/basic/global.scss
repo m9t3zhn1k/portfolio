@@ -10,3 +10,19 @@ body {
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--app-background-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--app-background-main-light);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--app-blue);
+}

@@ -30,6 +30,7 @@
 
   .heading {
     font: var(--app-font-display-md-bold);
+    color: var(--app-blue);
   }
 
   .subheading {
@@ -50,6 +51,20 @@
     img {
       height: 100%;
       width: 100%;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    button {
+      padding: 0.5rem 1.25rem;
+      font: var(--app-font-text-sm-regular);
+      color: var(--app-text-main);
+      border: 2px solid var(--app-text-main);
+      border-radius: 0.25rem;
     }
   }
 }

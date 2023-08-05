@@ -1,4 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core'
+import { projects } from '@app/projects/data'
+import { Project } from '@app/projects/models'
+import { ProjectComponent } from '@app/projects/ui'
 
 @Component({
   standalone: true,
@@ -6,5 +10,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core'
   templateUrl: './projects.page.html',
   styleUrls: ['./projects.page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [CommonModule, ProjectComponent],
 })
-export class ProjectsPage {}
+export class ProjectsPage {
+  public readonly projects = signal<Project[]>(projects)
+}

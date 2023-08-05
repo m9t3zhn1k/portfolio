@@ -1,1 +1,12 @@
-<div class="wrapper">PROJECTS</div>
+<div class="wrapper">
+  <section class="description">
+    <h1 class="heading">My Recent Projects</h1>
+    <p class="subheading">
+      Here are a few past design projects I've worked on. Want to see more?
+      <a class="link" href="mailto:m9t3zhn1k@gmail.com">Email me</a>.
+    </p>
+  </section>
+  <section class="projects">
+    <app-project *ngFor="let project of projects()" [project]="project"></app-project>
+  </section>
+</div>
