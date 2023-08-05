@@ -42,6 +42,12 @@
       "@app/core/*": ["./src/app/core/*"],
       "@app/home": ["./src/app/home/index.ts"],
       "@app/home/*": ["./src/app/home/*"],
+      "@app/projects": ["./src/app/projects/index.ts"],
+      "@app/projects/*": ["./src/app/projects/*"],
+      "@app/about": ["./src/app/about/index.ts"],
+      "@app/about/*": ["./src/app/about/*"],
+      "@app/contacts": ["./src/app/contacts/index.ts"],
+      "@app/contacts/*": ["./src/app/contacts/*"],
       "@app/shared": ["./src/app/shared/index.ts"],
       "@app/shared/*": ["./src/app/shared/*"]
     }
