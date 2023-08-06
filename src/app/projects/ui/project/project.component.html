@@ -4,8 +4,8 @@
     <p class="subheading">{{ project.description }}</p>
     <ul class="techs">
       <ng-container *ngFor="let techId of project.technologies">
-        <li *ngIf="findTechnology(techId) as tech" class="tech-icon-item">
-          <img src="{{ tech.icon }}" alt="{{ tech.title }}" />
+        <li *ngIf="findTechnology(techId) as tech">
+          <app-technology-item [technology]="tech"></app-technology-item>
         </li>
       </ng-container>
     </ul>

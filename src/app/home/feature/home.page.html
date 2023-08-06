@@ -34,8 +34,8 @@
       <h3 class="heading">Tech Stack</h3>
       <ul class="stack-icons">
         <ng-container *ngFor="let techId of user.technologies">
-          <li *ngIf="findTechnology(techId) as tech" class="stack-icon-item">
-            <img src="{{ tech.icon }}" alt="{{ tech.title }}" />
+          <li *ngIf="findTechnology(techId) as tech">
+            <app-technology-item [technology]="tech"></app-technology-item>
           </li>
         </ng-container>
       </ul>

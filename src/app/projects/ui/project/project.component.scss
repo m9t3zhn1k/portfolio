@@ -11,18 +11,18 @@
 .project-item {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 3rem;
 
   .description {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    flex: 1 1 40%;
+    flex: 1 1 45%;
     padding: 1rem 0;
   }
 
   .preview {
-    flex: 1 1 60%;
+    flex: 1 1 55%;
   }
 
   .heading {
@@ -39,16 +39,6 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-
-    .tech-icon-item {
-      height: 2rem;
-      width: 2rem;
-
-      img {
-        height: 100%;
-        width: 100%;
-      }
-    }
   }
 
   .content {

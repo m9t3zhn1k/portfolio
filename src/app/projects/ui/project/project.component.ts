@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common'
 import { ChangeDetectionStrategy, Component, Input, signal } from '@angular/core'
 import { Project } from '@app/projects/models'
-import { Technology, technologies } from '@app/shared'
+import { Technology, TechnologyItem, technologies } from '@app/shared'
 
 @Component({
   standalone: true,
@@ -9,7 +9,7 @@ import { Technology, technologies } from '@app/shared'
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule],
+  imports: [CommonModule, TechnologyItem],
   host: {
     '[attr.data-reversed]': 'isReversed()',
   },

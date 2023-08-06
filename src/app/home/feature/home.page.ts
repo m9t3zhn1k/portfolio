@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common'
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core'
-import { Technology, User, technologies, user } from '@app/shared'
+import { Technology, TechnologyItem, User, technologies, user } from '@app/shared'
 
 @Component({
   standalone: true,
@@ -8,7 +8,7 @@ import { Technology, User, technologies, user } from '@app/shared'
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule],
+  imports: [CommonModule, TechnologyItem],
 })
 export class HomePage {
   public readonly user = signal<User>(user)
