@@ -2,7 +2,13 @@
   <div class="description">
     <h3 class="heading">«{{ project.title }}»</h3>
     <p class="subheading">{{ project.description }}</p>
-    <p class="techs">{{ technologies() }}</p>
+    <ul class="techs">
+      <ng-container *ngFor="let techId of project.technologies">
+        <li *ngIf="findTechnology(techId) as tech" class="tech-icon-item">
+          <img src="{{ tech.icon }}" alt="{{ tech.title }}" />
+        </li>
+      </ng-container>
+    </ul>
   </div>
   <div class="preview">
     <div class="content">

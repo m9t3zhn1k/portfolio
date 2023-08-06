@@ -2,15 +2,23 @@
   display: block;
 }
 
+:host[data-reversed='true'] {
+  .project-item {
+    flex-direction: row-reverse;
+  }
+}
+
 .project-item {
   display: flex;
-  gap: 1rem;
+  flex-direction: row;
+  gap: 2rem;
 
   .description {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     flex: 1 1 40%;
+    padding: 1rem 0;
   }
 
   .preview {
@@ -28,7 +36,19 @@
   }
 
   .techs {
-    font: var(--app-font-text-md-medium);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    .tech-icon-item {
+      height: 2rem;
+      width: 2rem;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
 
   .content {
@@ -40,8 +60,6 @@
 
     &:hover {
       & .image-container {
-        width: 90%;
-
         &::after {
           background-color: var(--app-background-main-light-transparent);
         }
@@ -64,6 +82,7 @@
     aspect-ratio: 1920 / 1080;
     transition: all 0.75s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
+    border-radius: 0.5rem;
 
     &::after {
       content: '';

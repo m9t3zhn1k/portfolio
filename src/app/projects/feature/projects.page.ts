@@ -14,4 +14,8 @@ import { ProjectComponent } from '@app/projects/ui'
 })
 export class ProjectsPage {
   public readonly projects = signal<Project[]>(projects)
+
+  public isEven(value: number): boolean {
+    return Boolean(value % 2)
+  }
 }

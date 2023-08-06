@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core'
+import { Technology, User, technologies, user } from '@app/shared'
 
 @Component({
   standalone: true,
@@ -6,5 +8,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core'
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [CommonModule],
 })
-export class HomePage {}
+export class HomePage {
+  public readonly user = signal<User>(user)
+
+  public findTechnology(id: Technology['id']): Technology | undefined {
+    return technologies.find(technology => technology.id === id)
+  }
+}
