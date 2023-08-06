@@ -18,6 +18,8 @@ export class ProjectComponent {
   public readonly project = signal<Project | null>(null)
   public readonly isReversed = signal<boolean>(false)
 
+  public readonly isImageLoaded = signal<boolean>(false)
+
   @Input({ alias: 'project', required: true })
   public set projectSetter(value: Project) {
     this.project.set(value)
@@ -30,5 +32,9 @@ export class ProjectComponent {
 
   public findTechnology(id: Technology['id']): Technology | undefined {
     return technologies.find(technology => technology.id === id)
+  }
+
+  public setLoaded(): void {
+    this.isImageLoaded.set(true)
   }
 }

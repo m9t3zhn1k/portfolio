@@ -82,6 +82,12 @@
       background-color: transparent;
       transition: inherit;
     }
+
+    &.blur {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+    }
   }
 
   .image {
@@ -91,6 +97,11 @@
     object-fit: cover;
     object-position: center;
     transition: inherit;
+    opacity: 0;
+
+    &.loaded {
+      opacity: 1;
+    }
   }
 
   .links-container {

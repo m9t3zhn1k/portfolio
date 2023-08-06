@@ -12,8 +12,19 @@
   </div>
   <div class="preview">
     <div class="content">
-      <div class="image-container">
-        <img class="image" src="{{ project.thumbnail }}" alt="{{ project.title }}" />
+      <div
+        class="image-container blur"
+        [class.loaded]="isImageLoaded()"
+        style.backgroundImage="url({{ project.thumbnailPreload }})"
+      >
+        <img
+          class="image"
+          [class.loaded]="isImageLoaded()"
+          src="{{ project.thumbnail }}"
+          alt="{{ project.title }}"
+          loading="lazy"
+          (load)="setLoaded()"
+        />
       </div>
       <div class="links-container">
         <a class="link" href="{{ project.deployLink }}" target="_blank">Visit</a>
