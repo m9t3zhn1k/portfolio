@@ -10,7 +10,7 @@
   height: 100%;
   max-width: var(--app-container-lg);
   margin: 0 auto;
-  padding: 30vh 0.5rem 5rem;
+  padding: 30vh 0.5rem 2.5rem;
 }
 
 .description {
@@ -41,5 +41,5 @@
 .projects {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 5rem;
 }
