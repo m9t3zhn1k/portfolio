@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common'
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core'
+import { AfterViewInit, ChangeDetectionStrategy, Component, signal } from '@angular/core'
 import { Technology, TechnologyItem, User, technologies, user } from '@app/shared'
 
 @Component({
@@ -10,8 +10,13 @@ import { Technology, TechnologyItem, User, technologies, user } from '@app/share
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, TechnologyItem],
 })
-export class HomePage {
+export class HomePage implements AfterViewInit {
   public readonly user = signal<User>(user)
+  public readonly animate = signal<boolean>(false)
+
+  public ngAfterViewInit(): void {
+    setTimeout(() => this.animate.set(true), 0)
+  }
 
   public findTechnology(id: Technology['id']): Technology | undefined {
     return technologies.find(technology => technology.id === id)

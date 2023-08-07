@@ -86,7 +86,7 @@
       width: 100%;
       position: absolute;
       inset: 0;
-      object-fit: contain;
+      object-fit: cover;
       object-position: center;
     }
   }
@@ -105,5 +105,24 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
+  }
+
+  .stack-icon {
+    transform: translateX(-5rem);
+    opacity: 0;
+    filter: blur(var(--app-blur-sm));
+    transition: all 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.show {
+      transform: translateX(0);
+      filter: blur(0);
+      opacity: 1;
+    }
+
+    @for $i from 1 through 100 {
+      &.show:nth-child(#{$i}n) {
+        transition-delay: #{$i * 0.1}s;
+      }
+    }
   }
 }
