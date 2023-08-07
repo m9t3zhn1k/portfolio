@@ -59,12 +59,18 @@
     gap: 1rem;
     align-items: center;
 
-    button {
+    .button {
       padding: 0.5rem 1.25rem;
       font: var(--app-font-text-sm-regular);
       color: var(--app-text-main);
       border: 2px solid var(--app-text-main);
       border-radius: 0.25rem;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover {
+        color: var(--app-background-main);
+        background-color: var(--app-text-main);
+      }
     }
   }
 }
@@ -111,7 +117,7 @@
     transform: translateX(-5rem);
     opacity: 0;
     filter: blur(var(--app-blur-sm));
-    transition: all 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
     &.show {
       transform: translateX(0);
@@ -121,7 +127,7 @@
 
     @for $i from 1 through 100 {
       &.show:nth-child(#{$i}n) {
-        transition-delay: #{$i * 0.1}s;
+        transition-delay: #{$i * 0.05}s;
       }
     }
   }

@@ -66,7 +66,8 @@
         }
 
         .image {
-          scale: 1.15;
+          scale: 1.1;
+          filter: var(--app-blur-sm);
         }
       }
 
@@ -83,7 +84,7 @@
     aspect-ratio: 1920 / 1080;
     transition: all 0.75s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
-    border-radius: 0.5rem;
+    border-radius: 2rem;
 
     &::after {
       content: '';
@@ -134,7 +135,7 @@
     color: var(--app-text-main);
     border: 2px solid var(--app-text-main);
     border-radius: 0.25rem;
-    transition: all 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
       color: var(--app-background-main);
