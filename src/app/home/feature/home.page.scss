@@ -1,6 +1,7 @@
 :host {
   display: block;
   height: 100%;
+  width: 100%;
 }
 
 .wrapper {
@@ -12,7 +13,7 @@
   height: 100%;
   max-width: var(--app-container-md);
   margin: 0 auto;
-  padding: 5rem 0.5rem;
+  padding: 5rem 0.5rem 2rem;
 }
 
 .description-and-photo {

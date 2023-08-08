@@ -35,8 +35,6 @@ export class ProjectComponent implements OnInit {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         this.isVisible.set(true)
-      } else {
-        this.isVisible.set(false)
       }
     })
   })
