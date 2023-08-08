@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core'
+import { AfterViewInit, ChangeDetectionStrategy, Component, signal } from '@angular/core'
 
 @Component({
   standalone: true,
@@ -7,4 +7,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core'
   styleUrls: ['./about.page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AboutPage {}
+export class AboutPage implements AfterViewInit {
+  protected readonly loaded = signal<boolean>(false)
+
+  public ngAfterViewInit(): void {
+    setTimeout(() => this.loaded.set(true), 0)
+  }
+}
