@@ -8,7 +8,7 @@ export const projects: Project[] = [
     thumbnailPreload: 'assets/images/projects/project-management-app-small.webp',
     thumbnail: 'assets/images/projects/project-management-app.webp',
     technologies: ['HTML5', 'SCSS', 'TypeScript', 'Angular', 'NgRX', 'RxJs', 'MongoDB', 'Chart.js'],
-    deployLink: 'https://mr-project-management-app.netlify.app/',
+    deployLink: 'https://m9t3zhn1k.github.io/project-management-app/',
     repositoryLink: 'https://github.com/m9t3zhn1k/project-management-app/',
   },
   {
