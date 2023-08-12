@@ -68,7 +68,7 @@ export const projects: Project[] = [
     thumbnailPreload: 'assets/images/projects/art-quiz-small.webp',
     thumbnail: 'assets/images/projects/art-quiz.webp',
     technologies: ['HTML5', 'CSS3', 'JavaScript', 'WebPack'],
-    deployLink: '',
+    deployLink: 'https://m9t3zhn1k.github.io/Art-Quiz/',
     repositoryLink: 'https://github.com/m9t3zhn1k/Art-Quiz',
   },
   {
