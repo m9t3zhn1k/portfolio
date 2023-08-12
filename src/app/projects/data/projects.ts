@@ -18,7 +18,7 @@ export const projects: Project[] = [
     thumbnailPreload: 'assets/images/projects/youtube-searcher-small.webp',
     thumbnail: 'assets/images/projects/youtube-searcher.webp',
     technologies: ['HTML5', 'SCSS', 'TypeScript', 'Angular', 'NgRX', 'RxJs'],
-    deployLink: 'https://sparkling-taffy-56ba96.netlify.app/',
+    deployLink: 'https://m9t3zhn1k.github.io/youtube-app/',
     repositoryLink: 'https://github.com/m9t3zhn1k/youtube-app',
   },
   {
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     thumbnailPreload: 'assets/images/projects/christmas-tree-small.webp',
     thumbnail: 'assets/images/projects/christmas-tree.webp',
     technologies: ['HTML5', 'CSS3', 'TypeScript', 'WebPack'],
-    deployLink: '',
+    deployLink: 'https://m9t3zhn1k.github.io/Christmas-tree/',
     repositoryLink: 'https://github.com/m9t3zhn1k/Christmas-tree',
   },
   {
