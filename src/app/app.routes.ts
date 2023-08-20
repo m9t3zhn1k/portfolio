@@ -7,7 +7,7 @@ export const APP_ROUTES: Routes = [
     component: ShellPage,
     children: [
       {
-        path: 'home',
+        path: '',
         loadComponent: () => import('@app/home').then(m => m.HomePage),
       },
       {
@@ -21,11 +21,6 @@ export const APP_ROUTES: Routes = [
       {
         path: 'contacts',
         loadComponent: () => import('@app/contacts').then(m => m.ContactsPage),
-      },
-      {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full',
       },
     ],
   },

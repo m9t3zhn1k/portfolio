@@ -29,7 +29,7 @@
 
 .nav-item {
   position: relative;
-  font: var(--app-font-text-sm-medium);
+  font: var(--app-font-text-lg-medium);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &::after {
@@ -43,10 +43,7 @@
     transition: inherit;
   }
 
-  &:hover::after {
-    width: 100%;
-  }
-
+  &:hover::after,
   &.active::after {
     width: 100%;
   }
