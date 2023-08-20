@@ -1,4 +1,4 @@
-import { Technology } from '../technology/technology'
+import { Technology } from '@app/shared'
 
 export interface User {
   id: string
