@@ -1,4 +1,4 @@
-import { Technology } from './../../models/technology/technology'
+import { Technology } from '@app/shared'
 
 export const technologies: Technology[] = [
   {
