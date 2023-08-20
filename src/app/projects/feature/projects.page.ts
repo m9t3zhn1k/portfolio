@@ -13,9 +13,9 @@ import { ProjectComponent } from '@app/projects/ui'
   imports: [CommonModule, ProjectComponent],
 })
 export class ProjectsPage {
-  public readonly projects = signal<Project[]>(projects)
+  protected readonly projects = signal<Project[]>(projects)
 
-  public isEven(value: number): boolean {
+  protected isEven(value: number): boolean {
     return Boolean(value % 2)
   }
 }

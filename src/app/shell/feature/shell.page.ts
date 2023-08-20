@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core'
 import { RouterModule } from '@angular/router'
-import { FooterComponent } from '@app/shell/widgets/footer/footer.component'
-import { HeaderComponent } from '@app/shell/widgets/header/header.component'
+import { FooterComponent, HeaderComponent } from '@app/shell/widgets'
 
 @Component({
   standalone: true,

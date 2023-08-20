@@ -11,14 +11,14 @@ import { Technology, TechnologyItem, User, technologies, user } from '@app/share
   imports: [CommonModule, TechnologyItem],
 })
 export class HomePage implements AfterViewInit {
-  public readonly user = signal<User>(user)
-  public readonly animate = signal<boolean>(false)
+  protected readonly user = signal<User>(user)
+  protected readonly animate = signal<boolean>(false)
 
   public ngAfterViewInit(): void {
     setTimeout(() => this.animate.set(true), 0)
   }
 
-  public findTechnology(id: Technology['id']): Technology | undefined {
+  protected findTechnology(id: Technology['id']): Technology | undefined {
     return technologies.find(technology => technology.id === id)
   }
 }
