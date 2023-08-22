@@ -20,9 +20,9 @@
             <img src="assets/icons/social-links/email.svg" alt="Email" />
           </a>
         </div>
-        <div class="buttons">
+        <!-- <div class="buttons">
           <button class="button">Download CV</button>
-        </div>
+        </div> -->
       </div>
       <div class="photo-wrapper">
         <div class="photo">
@@ -32,9 +32,9 @@
     </section>
     <section class="tech-stack">
       <h3 class="heading">Tech Stack</h3>
-      <ul class="stack-icons">
+      <ul class="stack-icons" @fadeInLeft>
         <ng-container *ngFor="let techId of user.technologies">
-          <li *ngIf="findTechnology(techId) as tech" class="stack-icon" [class.show]="animate()">
+          <li *ngIf="findTechnology(techId) as tech">
             <app-technology-item [technology]="tech"></app-technology-item>
           </li>
         </ng-container>
