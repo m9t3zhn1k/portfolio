@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core'
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core'
 import { RouterModule } from '@angular/router'
-import { TranslocoDirective } from '@ngneat/transloco'
+import { TranslocoDirective, TranslocoService } from '@ngneat/transloco'
 
 @Component({
   standalone: true,
@@ -10,4 +10,11 @@ import { TranslocoDirective } from '@ngneat/transloco'
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterModule, TranslocoDirective],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  private readonly translocoService = inject(TranslocoService)
+
+  onClick(): void {
+    const current = this.translocoService.getActiveLang()
+    this.translocoService.setActiveLang(current === 'en' ? 'ru' : 'en')
+  }
+}
