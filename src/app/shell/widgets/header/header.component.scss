@@ -22,6 +22,12 @@
   font: var(--app-font-display-xs-semibold);
 }
 
+.navigation-and-setting {
+  display: flex;
+  column-gap: 2.5rem;
+  align-items: center;
+}
+
 .nav-list {
   display: flex;
   column-gap: 2.5rem;
@@ -47,4 +53,9 @@
   &.active::after {
     width: 100%;
   }
+}
+
+.change-language-button {
+  color: inherit;
+  font: var(--app-font-text-lg-medium);
 }

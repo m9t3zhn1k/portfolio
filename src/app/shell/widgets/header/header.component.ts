@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core'
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core'
 import { RouterModule } from '@angular/router'
 import { TranslocoDirective, TranslocoService } from '@ngneat/transloco'
 
@@ -13,8 +13,10 @@ import { TranslocoDirective, TranslocoService } from '@ngneat/transloco'
 export class HeaderComponent {
   private readonly translocoService = inject(TranslocoService)
 
-  onClick(): void {
-    const current = this.translocoService.getActiveLang()
-    this.translocoService.setActiveLang(current === 'en' ? 'ru' : 'en')
+  protected readonly currentLanguage = signal<string>(this.translocoService.getActiveLang())
+
+  protected changeLanguage(): void {
+    this.translocoService.setActiveLang(this.currentLanguage() === 'en' ? 'ru' : 'en')
+    this.currentLanguage.set(this.translocoService.getActiveLang())
   }
 }
