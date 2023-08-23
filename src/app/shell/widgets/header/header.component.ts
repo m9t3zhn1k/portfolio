@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core'
 import { RouterModule } from '@angular/router'
+import { TranslocoDirective } from '@ngneat/transloco'
 
 @Component({
   standalone: true,
@@ -7,6 +8,6 @@ import { RouterModule } from '@angular/router'
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterModule],
+  imports: [RouterModule, TranslocoDirective],
 })
 export class HeaderComponent {}

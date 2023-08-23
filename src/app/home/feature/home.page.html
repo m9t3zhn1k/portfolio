@@ -1,44 +1,50 @@
-<ng-container *ngIf="user() as user">
-  <div class="wrapper">
-    <section class="description-and-photo">
-      <div class="description">
-        <h1 class="heading">Front-End Developer</h1>
-        <p class="subheading">
-          Hi, I'm {{ user.name }}. A passionate engineer from {{ user.location }}
-        </p>
-        <div class="social-links">
-          <a class="social-link-item" href="https://www.linkedin.com/in/m9t3zhn1k/" target="_blank">
-            <img src="assets/icons/social-links/linkedin.svg" alt="LinkedIn" />
-          </a>
-          <a class="social-link-item" href="https://github.com/m9t3zhn1k" target="_blank">
-            <img src="assets/icons/social-links/github.svg" alt="GitHub" />
-          </a>
-          <a class="social-link-item" href="https://t.me/m9t3zhn1k" target="_blank">
-            <img src="assets/icons/social-links/telegram.svg" alt="Telegram" />
-          </a>
-          <a class="social-link-item" href="mailto:m9t3zhn1k@gmail.com" target="_blank">
-            <img src="assets/icons/social-links/email.svg" alt="Email" />
-          </a>
+<ng-container *transloco="let translate; read: 'home.page'">
+  <ng-container *ngIf="user() as user">
+    <div class="wrapper">
+      <section class="description-and-photo">
+        <div class="description">
+          <h1 class="heading">{{ translate('heading') }}</h1>
+          <p class="subheading">
+            {{ translate('subheading', { name: user.name, location: user.location }) }}
+          </p>
+          <div class="social-links">
+            <a
+              class="social-link-item"
+              href="https://www.linkedin.com/in/m9t3zhn1k/"
+              target="_blank"
+            >
+              <img src="assets/icons/social-links/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a class="social-link-item" href="https://github.com/m9t3zhn1k" target="_blank">
+              <img src="assets/icons/social-links/github.svg" alt="GitHub" />
+            </a>
+            <a class="social-link-item" href="https://t.me/m9t3zhn1k" target="_blank">
+              <img src="assets/icons/social-links/telegram.svg" alt="Telegram" />
+            </a>
+            <a class="social-link-item" href="mailto:m9t3zhn1k@gmail.com" target="_blank">
+              <img src="assets/icons/social-links/email.svg" alt="Email" />
+            </a>
+          </div>
+          <!-- <div class="buttons">
+            <button class="button">{{ translate('actions.download-cv') }}</button>
+          </div> -->
         </div>
-        <!-- <div class="buttons">
-          <button class="button">Download CV</button>
-        </div> -->
-      </div>
-      <div class="photo-wrapper">
-        <div class="photo">
-          <img src="assets/images/photo.png" alt="My photo" />
+        <div class="photo-wrapper">
+          <div class="photo">
+            <img src="assets/images/photo.png" alt="My photo" />
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="tech-stack">
-      <h3 class="heading">Tech Stack</h3>
-      <ul class="stack-icons" @fadeInLeft>
-        <ng-container *ngFor="let techId of user.technologies">
-          <li *ngIf="findTechnology(techId) as tech">
-            <app-technology-item [technology]="tech"></app-technology-item>
-          </li>
-        </ng-container>
-      </ul>
-    </section>
-  </div>
+      </section>
+      <section class="tech-stack">
+        <h3 class="heading">{{ translate('sections.tech-stack.heading') }}</h3>
+        <ul class="stack-icons" @fadeInLeft>
+          <ng-container *ngFor="let techId of user.technologies">
+            <li *ngIf="findTechnology(techId) as tech">
+              <app-technology-item [technology]="tech"></app-technology-item>
+            </li>
+          </ng-container>
+        </ul>
+      </section>
+    </div>
+  </ng-container>
 </ng-container>

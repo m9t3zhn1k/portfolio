@@ -1,3 +1,5 @@
-<div class="wrapper">
-  <p class="year">&copy; {{ currentYear }} All rights reserved</p>
-</div>
+<ng-container *transloco="let translate; read: 'footer'">
+  <footer class="wrapper">
+    <p class="year">&copy; {{ currentYear }} {{ translate('copyright') }}</p>
+  </footer>
+</ng-container>

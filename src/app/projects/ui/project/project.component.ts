@@ -10,6 +10,7 @@ import {
 } from '@angular/core'
 import { Project } from '@app/projects/models'
 import { Technology, TechnologyItem, technologies } from '@app/shared'
+import { TranslocoDirective } from '@ngneat/transloco'
 
 @Component({
   standalone: true,
@@ -17,7 +18,7 @@ import { Technology, TechnologyItem, technologies } from '@app/shared'
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, TechnologyItem],
+  imports: [CommonModule, TranslocoDirective, TechnologyItem],
   host: {
     '[attr.data-reversed]': 'isReversed()',
     '[attr.data-visible]': 'isVisible()',

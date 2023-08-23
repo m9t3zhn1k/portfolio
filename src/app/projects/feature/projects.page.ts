@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core'
 import { projects } from '@app/projects/data'
 import { Project } from '@app/projects/models'
 import { ProjectComponent } from '@app/projects/ui'
+import { TranslocoDirective } from '@ngneat/transloco'
 
 @Component({
   standalone: true,
@@ -10,7 +11,7 @@ import { ProjectComponent } from '@app/projects/ui'
   templateUrl: './projects.page.html',
   styleUrls: ['./projects.page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, ProjectComponent],
+  imports: [CommonModule, TranslocoDirective, ProjectComponent],
 })
 export class ProjectsPage {
   protected readonly projects = signal<Project[]>(projects)

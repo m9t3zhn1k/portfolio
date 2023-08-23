@@ -1,16 +1,18 @@
-<div class="wrapper">
-  <section class="description">
-    <h1 class="heading">My Recent Projects</h1>
-    <p class="subheading">
-      Here are a few past design projects I've worked on. Want to see more?
-      <a class="link" href="mailto:m9t3zhn1k@gmail.com">Email me</a>.
-    </p>
-  </section>
-  <section class="projects">
-    <app-project
-      *ngFor="let project of projects(); let index = index"
-      [project]="project"
-      [reversed]="isEven(index)"
-    ></app-project>
-  </section>
-</div>
+<ng-container *transloco="let translate; read: 'projects.page'">
+  <div class="wrapper">
+    <section class="description">
+      <h1 class="heading">{{ translate('heading') }}</h1>
+      <p class="subheading">
+        {{ translate('subheading') }}
+        <a class="link" href="mailto:m9t3zhn1k@gmail.com">{{ translate('actions.email') }}</a>.
+      </p>
+    </section>
+    <section class="projects">
+      <app-project
+        *ngFor="let project of projects(); let index = index"
+        [project]="project"
+        [reversed]="isEven(index)"
+      ></app-project>
+    </section>
+  </div>
+</ng-container>

@@ -2,6 +2,7 @@ import { animate, query, stagger, style, transition, trigger } from '@angular/an
 import { CommonModule } from '@angular/common'
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core'
 import { Technology, TechnologyItem, User, technologies, user } from '@app/shared'
+import { TranslocoDirective } from '@ngneat/transloco'
 
 @Component({
   standalone: true,
@@ -9,7 +10,7 @@ import { Technology, TechnologyItem, User, technologies, user } from '@app/share
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, TechnologyItem],
+  imports: [CommonModule, TranslocoDirective, TechnologyItem],
   animations: [
     trigger('fadeInLeft', [
       transition(':enter', [

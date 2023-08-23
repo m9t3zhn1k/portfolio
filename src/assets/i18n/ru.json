@@ -1,0 +1,16 @@
+{
+  "home": {
+    "page": {
+      "heading": "Фронтенд-разработчик",
+      "subheading": "Привет, меня зовут {{ name }}. Я инженер из {{ location }}",
+      "actions": {
+        "download-cv": "Скачать CV"
+      },
+      "sections": {
+        "tech-stack": {
+          "heading": "Инструменты"
+        }
+      }
+    }
+  }
+}

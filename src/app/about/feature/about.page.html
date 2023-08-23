@@ -1,92 +1,81 @@
-<div class="wrapper">
-  <div class="preview-container">
-    <h1 class="text">
-      I'm a Front-End Developer for
-      <a class="link" href="https://section228.com/development" target="_blank">Section228</a> in
-      Minsk, Belarus.
-    </h1>
-    <p class="text">
-      My work currently consists of a full time engineering role at different projects like
-      landings, online shops, admin panels, RSS Feed Reader and some others. I find this combine to
-      be super resourceful in terms my learning as a web developer, as well as for keeping up with
-      the rapid expansion of developer tools, libraries, frameworks, etc.
-    </p>
-  </div>
-  <section class="benefits-container" @flipInY>
-    <div class="benefit">
-      <div class="icon-container">
-        <img class="background" src="assets/images/about/pentagon.svg" alt="Pentagon shape" />
-        <img class="icon" src="assets/images/about/teamwork.svg" alt="Icon" />
-      </div>
-      <p class="heading">Teamwork</p>
-      <p class="subheading">The result is always higher when you are not alone</p>
+<ng-container *transloco="let translate; read: 'about.page'">
+  <div class="wrapper">
+    <div class="preview-container">
+      <h1 class="text">
+        {{ translate('preview.heading.1') }}
+        <a class="link" href="https://section228.com/development" target="_blank">Section228</a>
+        {{ translate('preview.heading.2') }}
+      </h1>
+      <p class="text">{{ translate('preview.text') }}</p>
     </div>
-    <div class="benefit">
-      <div class="icon-container">
-        <img class="background" src="assets/images/about/pentagon.svg" alt="Pentagon shape" />
-        <img class="icon" src="assets/images/about/responsibility.svg" alt="Icon" />
+    <section class="benefits-container" @flipInY>
+      <div class="benefit">
+        <div class="icon-container">
+          <img class="background" src="assets/images/about/pentagon.svg" alt="Pentagon shape" />
+          <img class="icon" src="assets/images/about/teamwork.svg" alt="Icon" />
+        </div>
+        <p class="heading">{{ translate('benefits.teamwork.heading') }}</p>
+        <p class="subheading">{{ translate('benefits.teamwork.subheading') }}</p>
       </div>
-      <p class="heading">Responsibility</p>
-      <p class="subheading">My layouts will work on any device, big or small</p>
-    </div>
-    <div class="benefit">
-      <div class="icon-container">
-        <img class="background" src="assets/images/about/pentagon.svg" alt="Pentagon shape" />
-        <img class="icon" src="assets/images/about/problem-solving.svg" alt="Icon" />
+      <div class="benefit">
+        <div class="icon-container">
+          <img class="background" src="assets/images/about/pentagon.svg" alt="Pentagon shape" />
+          <img class="icon" src="assets/images/about/responsibility.svg" alt="Icon" />
+        </div>
+        <p class="heading">{{ translate('benefits.responsibility.heading') }}</p>
+        <p class="subheading">{{ translate('benefits.responsibility.subheading') }}</p>
       </div>
-      <p class="heading">Problem-solving</p>
-      <p class="subheading">The code must solve business solutions</p>
-    </div>
-    <div class="benefit">
-      <div class="icon-container">
-        <img class="background" src="assets/images/about/pentagon.svg" alt="Pentagon shape" />
-        <img class="icon" src="assets/images/about/critical-thinking.svg" alt="Icon" />
+      <div class="benefit">
+        <div class="icon-container">
+          <img class="background" src="assets/images/about/pentagon.svg" alt="Pentagon shape" />
+          <img class="icon" src="assets/images/about/problem-solving.svg" alt="Icon" />
+        </div>
+        <p class="heading">{{ translate('benefits.problem-solving.heading') }}</p>
+        <p class="subheading">{{ translate('benefits.problem-solving.subheading') }}</p>
       </div>
-      <p class="heading">Critical thinking</p>
-      <p class="subheading">Making more informed decisions is important</p>
-    </div>
-  </section>
-  <section class="education-container">
-    <h2 class="heading">Education</h2>
-    <div class="item">
-      <div class="date-container">
-        <p class="date">2021 - 2022</p>
+      <div class="benefit">
+        <div class="icon-container">
+          <img class="background" src="assets/images/about/pentagon.svg" alt="Pentagon shape" />
+          <img class="icon" src="assets/images/about/critical-thinking.svg" alt="Icon" />
+        </div>
+        <p class="heading">{{ translate('benefits.critical-thinking.heading') }}</p>
+        <p class="subheading">{{ translate('benefits.critical-thinking.subheading') }}</p>
       </div>
-      <div class="text-container">
-        <p class="speciality">Front-End Developer</p>
-        <p class="institution">
-          <a href="https://rs.school/" target="_blank">The Rolling Scopes School</a>
-        </p>
-        <div class="description">
-          <p>
-            RS School is free-of-charge and community-based education program conducted by The
-            Rolling Scopes developer community since 2013.
+    </section>
+    <section class="education-container">
+      <h2 class="heading">{{ translate('education.heading') }}</h2>
+      <div class="item">
+        <div class="date-container">
+          <p class="date">2021 - 2022</p>
+        </div>
+        <div class="text-container">
+          <p class="speciality">{{ translate('education.rs-school.speciality') }}</p>
+          <p class="institution">
+            <a href="https://rs.school/" target="_blank">
+              {{ translate('education.rs-school.institution') }}
+            </a>
           </p>
-          <p>
-            At RS School I began to comprehend HTML, CSS, JavaScript. I had perfect communication
-            with mentors and other students.
-          </p>
-          <p>
-            Most of my first projects were carried out precisely as part of my studies at this
-            school. We performed some of them as a team task. So I have experience in team projects
-            in different roles including teamlead.
-          </p>
+          <div class="description">
+            <p>{{ translate('education.rs-school.description.1') }}</p>
+            <p>{{ translate('education.rs-school.description.2') }}</p>
+            <p>{{ translate('education.rs-school.description.3') }}</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="item">
-      <div class="date-container">
-        <p class="date">2011 - 2016</p>
+      <div class="item">
+        <div class="date-container">
+          <p class="date">2011 - 2016</p>
+        </div>
+        <div class="text-container">
+          <p class="speciality">{{ translate('education.bsuir.speciality') }}</p>
+          <p class="institution">
+            <a href="https://www.bsuir.by/" target="_blank">
+              {{ translate('education.bsuir.institution') }}
+            </a>
+          </p>
+          <div class="description">{{ translate('education.bsuir.description.1') }}</div>
+        </div>
       </div>
-      <div class="text-container">
-        <p class="speciality">Engineer in Laser information and measurement systems</p>
-        <p class="institution">
-          <a href="https://www.bsuir.by/" target="_blank"
-            >Belarusian State University of Informatics and Radioelectronics</a
-          >
-        </p>
-        <div class="description">Bachelor's degree</div>
-      </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
+</ng-container>

@@ -1,5 +1,6 @@
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations'
 import { ChangeDetectionStrategy, Component } from '@angular/core'
+import { TranslocoDirective } from '@ngneat/transloco'
 
 @Component({
   standalone: true,
@@ -7,6 +8,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core'
   templateUrl: './about.page.html',
   styleUrls: ['./about.page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [TranslocoDirective],
   animations: [
     trigger('flipInY', [
       transition(':enter', [

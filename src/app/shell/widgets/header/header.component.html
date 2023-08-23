@@ -1,23 +1,29 @@
-<div class="wrapper">
-  <a class="logo" [routerLink]="['/']">Portfolio</a>
-  <nav>
-    <ul class="nav-list">
-      <li>
-        <a
-          class="nav-item"
-          [routerLink]="['/']"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-          Home
-        </a>
-      </li>
-      <li>
-        <a class="nav-item" [routerLink]="['/', 'about']" routerLinkActive="active">About</a>
-      </li>
-      <li>
-        <a class="nav-item" [routerLink]="['/', 'projects']" routerLinkActive="active">Projects</a>
-      </li>
-    </ul>
-  </nav>
-</div>
+<ng-container *transloco="let translate; read: 'header'">
+  <header class="wrapper">
+    <a class="logo" [routerLink]="['/']">{{ translate('logo') }}</a>
+    <nav>
+      <ul class="nav-list">
+        <li>
+          <a
+            class="nav-item"
+            [routerLink]="['/']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            {{ translate('navigation.home') }}
+          </a>
+        </li>
+        <li>
+          <a class="nav-item" [routerLink]="['/', 'about']" routerLinkActive="active">
+            {{ translate('navigation.about') }}
+          </a>
+        </li>
+        <li>
+          <a class="nav-item" [routerLink]="['/', 'projects']" routerLinkActive="active">
+            {{ translate('navigation.projects') }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</ng-container>
