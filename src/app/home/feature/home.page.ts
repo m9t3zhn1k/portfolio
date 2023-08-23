@@ -1,6 +1,6 @@
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations'
 import { CommonModule } from '@angular/common'
-import { AfterViewInit, ChangeDetectionStrategy, Component, signal } from '@angular/core'
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core'
 import { Technology, TechnologyItem, User, technologies, user } from '@app/shared'
 
 @Component({
@@ -26,13 +26,8 @@ import { Technology, TechnologyItem, User, technologies, user } from '@app/share
     ]),
   ],
 })
-export class HomePage implements AfterViewInit {
+export class HomePage {
   protected readonly user = signal<User>(user)
-  protected readonly animate = signal<boolean>(false)
-
-  public ngAfterViewInit(): void {
-    setTimeout(() => this.animate.set(true), 0)
-  }
 
   protected findTechnology(id: Technology['id']): Technology | undefined {
     return technologies.find(technology => technology.id === id)

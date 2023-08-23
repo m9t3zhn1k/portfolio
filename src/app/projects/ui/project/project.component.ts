@@ -24,14 +24,14 @@ import { Technology, TechnologyItem, technologies } from '@app/shared'
   },
 })
 export class ProjectComponent implements OnInit {
-  public readonly elementRef = inject(ElementRef)
+  private readonly elementRef = inject(ElementRef)
 
-  public readonly project = signal<Project | null>(null)
-  public readonly isReversed = signal<boolean>(false)
-  public readonly isImageLoaded = signal<boolean>(false)
-  public readonly isVisible = signal<boolean>(false)
+  protected readonly project = signal<Project | null>(null)
+  protected readonly isReversed = signal<boolean>(false)
+  protected readonly isImageLoaded = signal<boolean>(false)
+  protected readonly isVisible = signal<boolean>(false)
 
-  public readonly intersectionObserver = new IntersectionObserver(entries => {
+  private readonly intersectionObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         this.isVisible.set(true)
@@ -53,11 +53,11 @@ export class ProjectComponent implements OnInit {
     this.intersectionObserver.observe(this.elementRef.nativeElement)
   }
 
-  public findTechnology(id: Technology['id']): Technology | undefined {
+  protected findTechnology(id: Technology['id']): Technology | undefined {
     return technologies.find(technology => technology.id === id)
   }
 
-  public setLoaded(): void {
+  protected setLoaded(): void {
     this.isImageLoaded.set(true)
   }
 }
