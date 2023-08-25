@@ -1,0 +1,6 @@
+<div class="actions">
+  <button class="button" (click)="changeLanguage()">{{ currentLanguage() | uppercase }}</button>
+  <button class="button" (click)="toggleTheme()">
+    <img [src]="themeIcon()" alt="Theme icon" />
+  </button>
+</div>
