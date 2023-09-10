@@ -24,7 +24,19 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/assets/styles/main.scss"],
+            "styles": [
+              "src/assets/styles/main.scss",
+              {
+                "input": "src/assets/styles/themes/dark.scss",
+                "bundleName": "dark",
+                "inject": false
+              },
+              {
+                "input": "src/assets/styles/themes/light.scss",
+                "bundleName": "light",
+                "inject": false
+              }
+            ],
             "scripts": []
           },
           "configurations": {
