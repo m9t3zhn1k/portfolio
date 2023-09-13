@@ -19,4 +19,10 @@
   color: var(--app-background-main);
   width: 1.5rem;
   height: 1.5rem;
+
+  .svg {
+    --app-svg-width: 100%;
+    --app-svg-height: 100%;
+    --app-svg-color: var(--app-background-main);
+  }
 }

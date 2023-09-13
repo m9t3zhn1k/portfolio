@@ -7,6 +7,7 @@ import {
   ThemeService,
   themeIconSources,
 } from '@app/core'
+import { SvgComponent } from '@app/core/components/svg'
 import { TranslocoService } from '@ngneat/transloco'
 
 @Component({
@@ -15,7 +16,7 @@ import { TranslocoService } from '@ngneat/transloco'
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule],
+  imports: [CommonModule, SvgComponent],
 })
 export class SettingsWidgetComponent {
   private readonly translocoService = inject(TranslocoService)

@@ -6,8 +6,8 @@
   height: 2rem;
   width: 2rem;
 
-  img {
-    height: 100%;
-    width: 100%;
+  .svg {
+    --app-svg-width: 100%;
+    --app-svg-height: 100%;
   }
 }

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common'
 import { ChangeDetectionStrategy, Component, Input, signal } from '@angular/core'
+import { SvgComponent } from '@app/core/components/svg'
 import { Technology } from '@app/shared/models'
 
 @Component({
@@ -8,7 +9,7 @@ import { Technology } from '@app/shared/models'
   templateUrl: './technology-item.component.html',
   styleUrls: ['./technology-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule],
+  imports: [CommonModule, SvgComponent],
 })
 export class TechnologyItem {
   public readonly data = signal<Technology | null>(null)

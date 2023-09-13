@@ -48,7 +48,12 @@
   .social-link-item {
     height: 1.5rem;
     width: 1.5rem;
-    color: var(--app-text-main);
+
+    .svg {
+      --app-svg-width: 100%;
+      --app-svg-height: 100%;
+      --app-svg-color: var(--app-text-main);
+    }
   }
 
   .buttons {
