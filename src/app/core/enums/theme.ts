@@ -8,6 +8,6 @@ export const Theme = {
 export type Theme = ValueOf<typeof Theme>
 
 export const themeIconSources: Record<Theme, string> = {
-  dark: 'assets/icons/themes/dark.svg',
-  light: 'assets/icons/themes/light.svg',
+  dark: 'assets/icons/themes/dark.svg#icon',
+  light: 'assets/icons/themes/light.svg#icon',
 }
