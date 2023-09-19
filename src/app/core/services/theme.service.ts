@@ -31,8 +31,12 @@ export class ThemeService {
   )
 
   public get(): Theme {
-    return (this.localStorageService.getItem(LocalStorageKey.Theme) as Theme) ??
-      this.isDarkColorSchemePrefered()
+    const saved = this.localStorageService.getItem(LocalStorageKey.Theme) as Theme
+    return saved
+      ? saved === Theme.Dark
+        ? Theme.Dark
+        : Theme.Light
+      : this.isDarkColorSchemePrefered()
       ? Theme.Dark
       : Theme.Light
   }
