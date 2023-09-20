@@ -36,7 +36,7 @@
 .nav-item {
   position: relative;
   font: var(--app-font-text-lg-medium);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: inherit;
 
   &::after {
     content: '';
@@ -46,7 +46,7 @@
     width: 0px;
     height: 1px;
     background-color: var(--app-text-main);
-    transition: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &:hover::after,

@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common'
 import { Injectable, effect, inject, signal } from '@angular/core'
-import { LocalStorageKey, Theme } from '@app/core'
+import { LocalStorageKey, Theme } from '@app/core/enums'
 import { LocalStorageService } from './local-storage.service'
 
 @Injectable({

@@ -12,16 +12,32 @@
               class="social-link-item"
               href="https://www.linkedin.com/in/m9t3zhn1k/"
               target="_blank"
+              aria-label="LinkedIn profile link"
             >
               <app-svg class="svg" src="assets/icons/social-links/linkedin.svg"></app-svg>
             </a>
-            <a class="social-link-item" href="https://github.com/m9t3zhn1k" target="_blank">
+            <a
+              class="social-link-item"
+              href="https://github.com/m9t3zhn1k"
+              target="_blank"
+              aria-label="GitHub profile link"
+            >
               <app-svg class="svg" src="assets/icons/social-links/github.svg"></app-svg>
             </a>
-            <a class="social-link-item" href="https://t.me/m9t3zhn1k" target="_blank">
+            <a
+              class="social-link-item"
+              href="https://t.me/m9t3zhn1k"
+              target="_blank"
+              aria-label="Teelgram chat link"
+            >
               <app-svg class="svg" src="assets/icons/social-links/telegram.svg"></app-svg>
             </a>
-            <a class="social-link-item" href="mailto:m9t3zhn1k@gmail.com" target="_blank">
+            <a
+              class="social-link-item"
+              href="mailto:m9t3zhn1k@gmail.com"
+              target="_blank"
+              aria-label="Email link"
+            >
               <app-svg class="svg" src="assets/icons/social-links/email.svg"></app-svg>
             </a>
           </div>
@@ -36,7 +52,7 @@
         </div>
       </section>
       <section class="tech-stack">
-        <h3 class="heading">{{ translate('sections.tech-stack.heading') }}</h3>
+        <h2 class="heading">{{ translate('sections.tech-stack.heading') }}</h2>
         <ul class="stack-icons" @fadeInLeft>
           <ng-container *ngFor="let techId of user.technologies">
             <li *ngIf="findTechnology(techId) as tech">

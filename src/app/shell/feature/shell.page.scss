@@ -5,6 +5,7 @@
   height: 100%;
   background-color: var(--app-background-main);
   flex: 1 1 auto;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main {

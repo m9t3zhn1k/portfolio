@@ -1,13 +1,8 @@
 import { CommonModule } from '@angular/common'
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core'
-import {
-  LocalStorageKey,
-  LocalStorageService,
-  Theme,
-  ThemeService,
-  themeIconSources,
-} from '@app/core'
 import { SvgComponent } from '@app/core/components/svg'
+import { LocalStorageKey, Theme, themeIconSources } from '@app/core/enums'
+import { LocalStorageService, ThemeService } from '@app/core/services'
 import { TranslocoService } from '@ngneat/transloco'
 
 @Component({

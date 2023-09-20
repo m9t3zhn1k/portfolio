@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core'
 import { RouterModule } from '@angular/router'
-import { LocalStorageKey, LocalStorageService } from '@app/core'
+import { LocalStorageKey } from '@app/core/enums'
+import { LocalStorageService } from '@app/core/services'
 import { TranslocoService } from '@ngneat/transloco'
 
 @Component({

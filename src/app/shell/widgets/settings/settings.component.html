@@ -1,6 +1,6 @@
 <div class="actions">
   <button class="button" (click)="changeLanguage()">{{ currentLanguage() | uppercase }}</button>
-  <button class="button" (click)="toggleTheme()">
+  <button class="button" (click)="toggleTheme()" aria-label="Theme button">
     <app-svg class="svg" [src]="themeIcon()"></app-svg>
   </button>
 </div>
