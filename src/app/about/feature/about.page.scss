@@ -1,3 +1,5 @@
+@use 'src/assets/styles/main.scss' as styles;
+
 :host {
   display: block;
 }
@@ -10,7 +12,7 @@
   height: 100%;
   max-width: var(--app-container-md);
   margin: 0 auto;
-  padding: 20vh 0.5rem 2rem;
+  padding: calc(20vh - 4rem) 1rem 2rem;
 }
 
 .preview-container {
@@ -30,8 +32,16 @@
 
 .benefits-container {
   display: grid;
-  grid-template-columns: repeat(4, minmax(8rem, 1fr));
+  grid-template-columns: repeat(2, minmax(8rem, 1fr));
   gap: 1rem;
+  max-width: 25rem;
+  margin: 0 auto;
+
+  @include styles.media-md {
+    grid-template-columns: repeat(4, minmax(8rem, 1fr));
+    max-width: none;
+    margin: 0;
+  }
 }
 
 .benefit {
@@ -77,17 +87,30 @@
 .education-container {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
+
+  @include styles.media-md {
+    gap: 2.5rem;
+  }
 
   .heading {
     font: var(--app-font-display-lg-semibold);
     color: var(--app-blue);
+    text-align: center;
+
+    @include styles.media-md {
+      text-align: left;
+    }
   }
 
   .item {
     display: flex;
-    justify-content: space-between;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include styles.media-md {
+      justify-content: space-between;
+      gap: 2rem;    }
   }
 
   .date-container {
