@@ -1,5 +1,6 @@
+import { OverlayModule } from '@angular/cdk/overlay'
 import { provideHttpClient } from '@angular/common/http'
-import { EnvironmentProviders, Provider, isDevMode } from '@angular/core'
+import { EnvironmentProviders, Provider, importProvidersFrom, isDevMode } from '@angular/core'
 import { provideAnimations } from '@angular/platform-browser/animations'
 import { provideRouter } from '@angular/router'
 import { provideTransloco } from '@ngneat/transloco'
@@ -19,4 +20,5 @@ export const APP_PROVIDERS: (EnvironmentProviders | Provider)[] = [
     },
     loader: TranslocoHttpLoader,
   }),
+  importProvidersFrom(OverlayModule),
 ]

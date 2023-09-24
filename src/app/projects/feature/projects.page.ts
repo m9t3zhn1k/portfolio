@@ -15,8 +15,4 @@ import { TranslocoDirective } from '@ngneat/transloco'
 })
 export class ProjectsPage {
   protected readonly projects = signal<Project[]>(projects)
-
-  protected isEven(value: number): boolean {
-    return Boolean(value % 2)
-  }
 }

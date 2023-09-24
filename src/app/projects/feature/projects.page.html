@@ -9,9 +9,9 @@
     </section>
     <section class="projects">
       <app-project
-        *ngFor="let project of projects(); let index = index"
+        *ngFor="let project of projects(); let even = even"
         [project]="project"
-        [reversed]="isEven(index)"
+        [reversed]="even"
       ></app-project>
     </section>
   </div>
