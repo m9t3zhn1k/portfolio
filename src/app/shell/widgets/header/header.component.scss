@@ -103,7 +103,7 @@
     line-height: 1.45;
 
     .mob-nav-item {
-      font: var(--app-font-display-sm-medium);
+      font: var(--app-font-display-xs-medium);
       transition: inherit;
     }
   }
@@ -116,6 +116,7 @@
     margin-top: auto;
 
     .button {
+      color: var(--app-text-main);
       font: var(--app-font-text-lg-semibold);
       width: 2rem;
       height: 2rem;

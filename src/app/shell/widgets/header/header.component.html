@@ -1,7 +1,7 @@
 <ng-container *transloco="let translate; read: 'header'">
   <header class="wrapper" cdkOverlayOrigin #headerOrigin="cdkOverlayOrigin">
-    <a class="logo" [routerLink]="['/']">{{ translate('logo') }}</a>
-    <button class="menu-button" (click)="toggleMobMenu()">
+    <a class="logo" [routerLink]="['/']" aria-label="Logotype">{{ translate('logo') }}</a>
+    <button class="menu-button" aria-label="Mobile menu button" (click)="toggleMobMenu()">
       <app-svg class="menu-icon" src="assets/icons/menu.svg"></app-svg>
     </button>
     <div class="navigation">
@@ -44,8 +44,15 @@
   >
     <div class="mob-menu-container">
       <div class="mob-menu-top">
-        <a class="logo" [routerLink]="['/']" (click)="toggleMobMenu()">{{ translate('logo') }}</a>
-        <button type="button" class="menu-button" (click)="toggleMobMenu()">
+        <a class="logo" [routerLink]="['/']" aria-label="Logotype" (click)="toggleMobMenu()">
+          {{ translate('logo') }}
+        </a>
+        <button
+          type="button"
+          class="menu-button"
+          aria-label="Mobile menu button"
+          (click)="toggleMobMenu()"
+        >
           <app-svg class="menu-icon" src="assets/icons/close.svg"></app-svg>
         </button>
       </div>
