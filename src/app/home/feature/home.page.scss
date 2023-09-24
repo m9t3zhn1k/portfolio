@@ -13,7 +13,7 @@
   height: 100%;
   max-width: var(--app-container-md);
   margin: 0 auto;
-  padding: 5rem 0.5rem 2rem;
+  padding: 5rem 1rem 2rem;
 }
 
 .description-and-photo {
@@ -113,5 +113,6 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    flex-wrap: wrap;
   }
 }

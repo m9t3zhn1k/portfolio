@@ -1,9 +1,7 @@
 import { CommonModule } from '@angular/common'
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core'
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core'
 import { SvgComponent } from '@app/core/components/svg'
-import { LocalStorageKey, Theme, themeIconSources } from '@app/core/enums'
-import { LocalStorageService, ThemeService } from '@app/core/services'
-import { TranslocoService } from '@ngneat/transloco'
+import { LanguageService, ThemeService } from '@app/core/services'
 
 @Component({
   standalone: true,
@@ -14,23 +12,15 @@ import { TranslocoService } from '@ngneat/transloco'
   imports: [CommonModule, SvgComponent],
 })
 export class SettingsWidgetComponent {
-  private readonly translocoService = inject(TranslocoService)
-  private readonly localStorageService = inject(LocalStorageService)
   private readonly themeService = inject(ThemeService)
+  private readonly languageService = inject(LanguageService)
 
-  protected readonly currentLanguage = signal<string>(this.translocoService.getActiveLang())
+  protected readonly currentLanguage = this.languageService.currentLanguage
 
-  protected readonly themeIcon = computed(() =>
-    this.themeService.theme() === Theme.Dark ? themeIconSources.dark : themeIconSources.light,
-  )
+  protected readonly themeIcon = this.themeService.themeIcon
 
   protected changeLanguage(): void {
-    this.translocoService.setActiveLang(this.currentLanguage() === 'en' ? 'ru' : 'en')
-
-    const language = this.translocoService.getActiveLang()
-
-    this.currentLanguage.set(language)
-    this.localStorageService.setItem(LocalStorageKey.Language, language)
+    this.languageService.changeLanguage()
   }
 
   protected toggleTheme(): void {

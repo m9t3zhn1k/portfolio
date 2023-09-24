@@ -1,8 +1,20 @@
+@use 'src/assets/styles/main.scss' as styles;
+
 :host {
+  display: none;
   position: fixed;
   right: 1rem;
-  top: 50%;
   transform: translateY(-50%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include styles.media-md {
+    display: block;
+    top: 90%;
+  }
+
+  @include styles.media-lg {
+    top: 50%;
+  }
 }
 
 .actions {

@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common'
-import { Injectable, effect, inject, signal } from '@angular/core'
-import { LocalStorageKey, Theme } from '@app/core/enums'
+import { Injectable, computed, effect, inject, signal } from '@angular/core'
+import { LocalStorageKey, Theme, themeIconSources } from '@app/core/enums'
 import { LocalStorageService } from './local-storage.service'
 
 @Injectable({
@@ -16,6 +16,10 @@ export class ThemeService {
 
   public readonly theme = signal<Theme>(this.get())
   private readonly themeLinkElement = signal<HTMLLinkElement | null>(null)
+
+  public readonly themeIcon = computed(() =>
+    this.theme() === Theme.Dark ? themeIconSources.dark : themeIconSources.light,
+  )
 
   public readonly applyTheme = effect(
     () => {

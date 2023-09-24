@@ -1,7 +1,10 @@
 <ng-container *transloco="let translate; read: 'header'">
-  <header class="wrapper">
+  <header class="wrapper" cdkOverlayOrigin #headerOrigin="cdkOverlayOrigin">
     <a class="logo" [routerLink]="['/']">{{ translate('logo') }}</a>
-    <div class="navigation-and-setting">
+    <button class="menu-button" (click)="toggleMobMenu()">
+      <app-svg class="menu-icon" src="assets/icons/menu.svg"></app-svg>
+    </button>
+    <div class="navigation">
       <nav>
         <ul class="nav-list">
           <li>
@@ -28,4 +31,69 @@
       </nav>
     </div>
   </header>
+  <ng-template
+    cdkConnectedOverlay
+    [cdkConnectedOverlayOrigin]="headerOrigin"
+    [cdkConnectedOverlayOpen]="isMobMenuOpen()"
+    [cdkConnectedOverlayScrollStrategy]="scrollStrategy"
+    [cdkConnectedOverlayDisableClose]="true"
+    [cdkConnectedOverlayHasBackdrop]="false"
+    cdkConnectedOverlayHeight="100%"
+    cdkConnectedOverlayWidth="100%"
+    [cdkConnectedOverlayOffsetY]="-64"
+  >
+    <div class="mob-menu-container">
+      <div class="mob-menu-top">
+        <a class="logo" [routerLink]="['/']" (click)="toggleMobMenu()">{{ translate('logo') }}</a>
+        <button type="button" class="menu-button" (click)="toggleMobMenu()">
+          <app-svg class="menu-icon" src="assets/icons/close.svg"></app-svg>
+        </button>
+      </div>
+      <div class="mob-menu-content">
+        <nav>
+          <ul class="mob-nav-list">
+            <li>
+              <a
+                class="nav-item mob-nav-item"
+                [routerLink]="['/']"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="toggleMobMenu()"
+              >
+                {{ translate('navigation.home') }}
+              </a>
+            </li>
+            <li>
+              <a
+                class="nav-item mob-nav-item"
+                [routerLink]="['/', 'about']"
+                routerLinkActive="active"
+                (click)="toggleMobMenu()"
+              >
+                {{ translate('navigation.about') }}
+              </a>
+            </li>
+            <li>
+              <a
+                class="nav-item mob-nav-item"
+                [routerLink]="['/', 'projects']"
+                routerLinkActive="active"
+                (click)="toggleMobMenu()"
+              >
+                {{ translate('navigation.projects') }}
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mob-menu-actions">
+        <button class="button" (click)="changeLanguage()">
+          {{ currentLanguage() | uppercase }}
+        </button>
+        <button class="button" (click)="toggleTheme()" aria-label="Theme button">
+          <app-svg class="svg" [src]="themeIcon()"></app-svg>
+        </button>
+      </div>
+    </div>
+  </ng-template>
 </ng-container>
