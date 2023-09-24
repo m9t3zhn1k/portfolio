@@ -1,3 +1,5 @@
+@use 'src/assets/styles/main.scss' as styles;
+
 :host {
   display: block;
   height: 100%;
@@ -13,21 +15,32 @@
   height: 100%;
   max-width: var(--app-container-md);
   margin: 0 auto;
-  padding: 5rem 1rem 2rem;
+  padding: 1rem 1rem 2rem;
 }
 
 .description-and-photo {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+
+  @include styles.media-md {
+    flex-direction: row;
+  }
 }
 
 .description {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  flex: 1 1 50%;
+  gap: 1.5rem;
+  text-align: center;
+
+  @include styles.media-md {
+    flex: 1 1 50%;
+    gap: 1rem;
+    text-align: left;
+  }
 
   .heading {
     font: var(--app-font-display-md-bold);
@@ -43,6 +56,11 @@
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    justify-content: center;
+
+    @include styles.media-md {
+      justify-content: flex-start;
+    }
   }
 
   .social-link-item {
@@ -78,7 +96,13 @@
 }
 
 .photo-wrapper {
-  flex: 1 1 30%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: calc(320px - 2rem);
+
+  @include styles.media-md {
+    flex: 1 1 30%;
+  }
 
   .photo {
     position: relative;
