@@ -47,6 +47,11 @@ export const technologies: Technology[] = [
     icon: 'assets/icons/techs/rxjs.svg',
   },
   {
+    id: 'Vue',
+    title: 'Vue',
+    icon: 'assets/icons/techs/vue.svg',
+  },
+  {
     id: 'WebPack',
     title: 'WebPack',
     icon: 'assets/icons/techs/webpack.svg',
@@ -65,5 +70,10 @@ export const technologies: Technology[] = [
     id: 'Chart.js',
     title: 'Chart.js',
     icon: 'assets/icons/techs/chartjs.svg',
+  },
+  {
+    id: 'Jest',
+    title: 'Jest',
+    icon: 'assets/icons/techs/jest.svg',
   },
 ]

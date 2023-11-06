@@ -2,6 +2,16 @@ import { Project } from '@app/projects/models'
 
 export const projects: Project[] = [
   {
+    id: 'Medium Clone',
+    title: 'project-items.12.title',
+    description: 'project-items.12.description',
+    thumbnailPreload: 'assets/images/projects/medium-clone-small.webp',
+    thumbnail: 'assets/images/projects/medium-clone.webp',
+    technologies: ['HTML5', 'SCSS', 'TypeScript', 'Vue'],
+    deployLink: 'https://m9t3zhn1k.github.io/medium-clone/',
+    repositoryLink: 'https://github.com/m9t3zhn1k/medium-clone/',
+  },
+  {
     id: 'Project Management System',
     title: 'project-items.1.title',
     description: 'project-items.1.description',

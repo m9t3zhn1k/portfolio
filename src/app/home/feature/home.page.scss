@@ -126,11 +126,11 @@
 
 .tech-stack {
   display: flex;
-  align-items: center;
   gap: 2rem;
 
   .heading {
     font: var(--app-font-text-xl-regular);
+    flex: 1 0 auto;
   }
 
   .stack-icons {

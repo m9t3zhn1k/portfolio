@@ -16,7 +16,9 @@ export const user: User = {
     'Angular',
     'NgRX',
     'RxJs',
+    'Vue',
     'MongoDB',
     'Chart.js',
+    'Jest',
   ],
 }
