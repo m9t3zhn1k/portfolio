@@ -131,6 +131,10 @@
       "11": {
         "title": "Virtual Keyboard",
         "description": "Just a simple app"
+      },
+      "12": {
+        "title": "Medium clone",
+        "description": "A clone app of Medium"
       }
     }
   }
