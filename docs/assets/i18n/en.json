@@ -89,52 +89,52 @@
     },
     "project-items": {
       "1": {
-        "title": "Project Management System",
-        "description": "Angular SPA app tracking time"
+        "title": "Kanban board",
+        "description": "The kanban board application will help the user break down tasks into small ones and see the progress of completed tasks, so he can achieve goals efficiently and without wasting time."
       },
       "2": {
         "title": "Youtube searcher",
-        "description": "Angular SPA for searching on youtube"
+        "description": "Application allows user to search for videos on YouTube, sort and filter. He can also view detailed information about the videos of interest."
       },
       "3": {
         "title": "RSLang 2022 Q1",
-        "description": "SPA for learning English with quizzes"
+        "description": "The app is suitable for effectively learning english words in a playful way and tracking your progress."
       },
       "4": {
         "title": "RSLang 2021 Q3",
-        "description": "SPA for learning English with quizzes"
+        "description": "Application for studying english words in a playful form. An electronic textbook with a base of words for study, mini-games for their repetition."
       },
       "5": {
         "title": "Kitchen knives store",
-        "description": "SPA-store with kitchen knives"
+        "description": "Catalog of an online shop selling chef's knives. Allows the user to search for products of interest by name, as well as filter by knife weight, cost, type and other parameters."
       },
       "6": {
         "title": "Christmas tree",
-        "description": "SPA for Christmas tree decoration"
+        "description": "In the app the user is invited to select toys and then use them to dress up a Christmas tree."
       },
       "7": {
         "title": "Art Quiz",
-        "description": "SPA-quiz on knowledge of masterpieces of painting and their authors"
+        "description": "This app allows the user to consolidate his knowledge in painting, guessing the authors and their works."
       },
       "8": {
         "title": "Louvre",
-        "description": "Louvre's landing page"
+        "description": "Louvre's landing page."
       },
       "9": {
         "title": "Shelter",
-        "description": "Shelter's landing page"
+        "description": "Shelter's landing page."
       },
       "10": {
         "title": "Momentum",
-        "description": "Dashboard featuring time, music, weather and inspiration"
+        "description": "Dashboard featuring time, music, weather and inspiration."
       },
       "11": {
         "title": "Virtual Keyboard",
-        "description": "Just a simple app"
+        "description": "The application emulates a real keyboard when typing."
       },
       "12": {
         "title": "Medium clone",
-        "description": "A clone app of Medium"
+        "description": "The application allows the user to manage his articles, like intersting post and follow another authors."
       }
     }
   }
